@@ -7,104 +7,104 @@ export function getProducts(locale: Locale): Product[] {
     en: [
       {
         id: "1",
-        name: "Premium Wireless Headphones",
+        name: "Nintendo Switch Lite",
         description:
-          "Experience crystal-clear sound with our premium wireless headphones. Perfect for music lovers and professionals alike.",
-        price: 129.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Enjoy handheld gaming on the go with the Nintendo Switch Lite. This compact console is perfect for solo play and comes in a variety of vibrant colors—check the site for all available options. [View Product](https://www.mediamarkt.nl/nl/product/_nintendo-switch-lite-coral-1657574.html)",
+        price: 209,
+        image: "/SwitchLite.jpeg",
       },
       {
         id: "2",
-        name: "Smart Fitness Tracker",
+        name: "Nintendo Switch Standard",
         description:
-          "Track your fitness goals with our advanced smart fitness tracker. Features heart rate monitoring, step counting, and sleep analysis.",
-        price: 89.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Get the full console experience with the Nintendo Switch Standard edition. Featuring detachable Joy-Cons and dock mode, it's perfect for solo or multiplayer gaming. Available in red and blue. [View Product](https://www.mediamarkt.nl/nl/product/_nintendo-switch-rood-en-blauw-1742674.html)",
+        price: 278,
+        image: "/SwitchStandard.jpeg",
       },
       {
         id: "3",
-        name: "Ultra-Thin Laptop",
+        name: "Nintendo Switch OLED",
         description:
-          "Powerful and portable, our ultra-thin laptop is perfect for professionals on the go. Features a long-lasting battery and stunning display.",
-        price: 999.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Take your gaming to the next level with the Nintendo Switch OLED. Featuring a stunning 7-inch OLED display, enhanced audio, and improved kickstand. Available in red and blue. [View Product](https://www.mediamarkt.nl/nl/product/_nintendo-switch-oled-rood-blauw-1701251.html)",
+        price: 328,
+        image: "/SwitchOled.jpeg",
       },
       {
         id: "4",
-        name: "Professional Camera Kit",
+        name: "Samsung Galaxy S23 Black - 128 GB",
         description:
-          "Capture life's moments with our professional camera kit. Includes high-quality lenses and accessories for the perfect shot every time.",
-        price: 799.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Meet the Samsung Galaxy S23 in sleek black with 128 GB storage. Enjoy cutting-edge performance, an advanced camera system, and a premium build. [View Product](https://www.mediamarkt.nl/nl/product/_samsung-galaxy-s23-5g-128-gb-zwart-128-gb-zwart-101827311.html)",
+        price: 548,
+        image: "/s23-black.jpeg",
       },
       {
         id: "5",
-        name: "Smart Home Hub",
+        name: "Samsung Galaxy S23 Green - 256 GB",
         description:
-          "Control your entire home with our smart home hub. Compatible with all major smart home devices for seamless integration.",
-        price: 149.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Power and elegance meet in the Samsung Galaxy S23, now in stylish green with 256 GB storage. Enjoy smooth performance, a pro-grade camera, and exceptional battery life. [View Product](https://www.mediamarkt.nl/nl/product/_samsung-galaxy-s23-5g-256-gb-groen-256-gb-groen-101827308.html)",
+        price: 636,
+        image: "/s23-green.jpeg",
       },
       {
         id: "6",
-        name: "Portable Bluetooth Speaker",
+        name: "Samsung Galaxy S23 Cream - 256 GB",
         description:
-          "Take your music anywhere with our portable Bluetooth speaker. Waterproof and durable with exceptional sound quality.",
-        price: 59.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Stand out with the Samsung Galaxy S23 in elegant cream. Featuring 256 GB of storage, high-end processing power, and stunning visuals in a unique tone. [View Product](https://www.mediamarkt.nl/nl/product/_samsung-galaxy-s23-5g-128-gb-wit-128-gb-wit-101827332.html)",
+        price: 493,
+        image: "/s23-cream.jpeg",
       },
     ],
     es: [
       {
         id: "1",
-        name: "Auriculares Inalámbricos Premium",
+        name: "Nintendo Switch Lite",
         description:
-          "Experimenta un sonido cristalino con nuestros auriculares inalámbricos premium. Perfectos para amantes de la música y profesionales.",
-        price: 129.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Disfruta de juegos portátiles con la Nintendo Switch Lite. Esta consola compacta es ideal para jugar solo y está disponible en varios colores vibrantes. Consulta el sitio para ver todas las opciones. [Ver producto](https://www.mediamarkt.nl/nl/product/_nintendo-switch-lite-coral-1657574.html)",
+        price: 209,
+        image: "/SwitchLite.jpeg",
       },
       {
         id: "2",
-        name: "Rastreador de Fitness Inteligente",
+        name: "Nintendo Switch Estándar",
         description:
-          "Haz seguimiento de tus objetivos de fitness con nuestro avanzado rastreador inteligente. Incluye monitoreo de ritmo cardíaco, contador de pasos y análisis del sueño.",
-        price: 89.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Vive la experiencia completa de consola con la Nintendo Switch Estándar. Con Joy-Cons desmontables y modo dock, es ideal para jugar solo o con amigos. Disponible en rojo y azul. [Ver producto](https://www.mediamarkt.nl/nl/product/_nintendo-switch-rood-en-blauw-1742674.html)",
+        price: 278,
+        image: "/SwitchStandard.jpeg",
       },
       {
         id: "3",
-        name: "Portátil Ultra Delgado",
+        name: "Nintendo Switch OLED",
         description:
-          "Potente y portátil, nuestro portátil ultra delgado es perfecto para profesionales en movimiento. Cuenta con una batería de larga duración y una pantalla impresionante.",
-        price: 999.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Lleva tu juego al siguiente nivel con la Nintendo Switch OLED. Pantalla OLED de 7 pulgadas, sonido mejorado y soporte ajustable. Disponible en rojo y azul. [Ver producto](https://www.mediamarkt.nl/nl/product/_nintendo-switch-oled-rood-blauw-1701251.html)",
+        price: 328,
+        image: "/SwitchOled.jpeg",
       },
       {
         id: "4",
-        name: "Kit de Cámara Profesional",
+        name: "Samsung Galaxy S23 Negro - 128 GB",
         description:
-          "Captura los momentos de la vida con nuestro kit de cámara profesional. Incluye lentes de alta calidad y accesorios para la toma perfecta en todo momento.",
-        price: 799.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Descubre el Samsung Galaxy S23 en elegante color negro con 128 GB de almacenamiento. Rendimiento de última generación y cámara avanzada. [Ver producto](https://www.mediamarkt.nl/nl/product/_samsung-galaxy-s23-5g-128-gb-zwart-128-gb-zwart-101827311.html)",
+        price: 548,
+        image: "/s23-black.jpeg",
       },
       {
         id: "5",
-        name: "Centro de Hogar Inteligente",
+        name: "Samsung Galaxy S23 Verde - 256 GB",
         description:
-          "Controla toda tu casa con nuestro centro de hogar inteligente. Compatible con todos los principales dispositivos de hogar inteligente para una integración perfecta.",
-        price: 149.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "El Samsung Galaxy S23 combina potencia y estilo en su versión verde con 256 GB. Fluidez, cámara profesional y excelente autonomía. [Ver producto](https://www.mediamarkt.nl/nl/product/_samsung-galaxy-s23-5g-256-gb-groen-256-gb-groen-101827308.html)",
+        price: 636,
+        image: "/s23-green.jpeg",
       },
       {
         id: "6",
-        name: "Altavoz Bluetooth Portátil",
+        name: "Samsung Galaxy S23 Crema - 256 GB",
         description:
-          "Lleva tu música a cualquier lugar con nuestro altavoz Bluetooth portátil. Resistente al agua y duradero con una calidad de sonido excepcional.",
-        price: 59.99,
-        image: "/placeholder.svg?height=300&width=300",
+          "Destácate con el Samsung Galaxy S23 en color crema. Con 256 GB de almacenamiento, un rendimiento potente y un diseño sofisticado. [Ver producto](https://www.mediamarkt.nl/nl/product/_samsung-galaxy-s23-5g-128-gb-wit-128-gb-wit-101827332.html)",
+        price: 493,
+        image: "/s23-cream.jpeg",
       },
     ],
-  }
+  }  
 
   return products[locale]
 }

@@ -54,36 +54,36 @@ export default function ProductCard({ product, dictionary }: ProductCardProps) {
   }
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden border-muted bg-card/80 backdrop-blur-sm relative gamer-border">
-      <CardHeader className="p-6 relative">
+    <Card className="gamer-border relative flex h-full flex-col overflow-hidden border-muted bg-card/80 backdrop-blur-sm">
+      <CardHeader className="relative p-6">
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-4 right-4 z-20 bg-background/50 backdrop-blur-sm hover:bg-background/70 rounded-md"
+          className="absolute right-4 top-4 z-20 rounded-md bg-background/50 backdrop-blur-sm hover:bg-background/70"
           onClick={toggleFavorite}
           aria-label={isFav ? "Remove from favorites" : "Add to favorites"}
         >
           <Heart className={cn("h-5 w-5", isFav ? "fill-red-500 text-red-500" : "text-gray-400")} />
         </Button>
-        <div className="aspect-square relative overflow-hidden rounded-md">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-10"></div>
+        <div className="relative aspect-square overflow-hidden rounded-md bg-white">
+          <div className="absolute inset-0 z-10 from-primary/20 to-secondary/20"></div>
           <Image
             src={product.image || "/placeholder.svg"}
             alt={product.name}
             fill
-            className="object-cover transition-transform hover:scale-105 z-0"
+            className="z-0 object-contain transition-transform hover:scale-105"
           />
         </div>
       </CardHeader>
-      <CardContent className="flex-grow px-6 pb-4 relative z-10">
-        <CardTitle className="text-xl mb-3 text-blue-500">{product.name}</CardTitle>
-        <p className="text-muted-foreground line-clamp-3">{product.description}</p>
+      <CardContent className="relative z-10 flex-grow px-6 pb-4">
+        <CardTitle className="mb-3 text-xl text-blue-500">{product.name}</CardTitle>
+        <p className="line-clamp-3 text-muted-foreground">{product.description}</p>
       </CardContent>
       <CardFooter className="flex flex-col items-start gap-3 px-6 pb-6 pt-0">
-        <p className="font-bold text-lg text-cyan-500">
+        <p className="text-lg font-bold text-cyan-500">
           {dictionary.price}: ${product.price.toFixed(2)}
         </p>
-        <div className="flex gap-3 w-full">
+        <div className="flex w-full gap-3">
           <Button variant="outline" size="sm" className="flex-1 border-blue-500/50 hover:border-blue-500">
             {dictionary.viewDetails}
           </Button>
