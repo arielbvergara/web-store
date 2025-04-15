@@ -118,7 +118,7 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                 <div className="hidden grid-cols-10 gap-4 border-b border-muted py-2 text-sm font-medium md:grid">
                   <div className="col-span-6">{dictionary?.product}</div>
                   <div className="col-span-2 text-right">{dictionary?.priceInEuros}</div>
-                  <div className="col-span-2 text-right">{dictionary?.priceInPesos}</div>
+                  <div className="col-span-1 text-right">{dictionary?.priceInPesos}</div>
                 </div>
 
                 {/* Mobile Headers */}
