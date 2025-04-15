@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 14% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 14% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 100% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gamer-gradient {
+  background: linear-gradient(to right, #0099ff, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gamer-border {
+  position: relative;
+}
+
+.gamer-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #0099ff, #00e5ff, #00ffcc) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px rgba(0, 153, 255, 0.8), 0 0 10px rgba(0, 153, 255, 0.5);
+}
+
+.neon-box {
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.5), 0 0 20px rgba(0, 153, 255, 0.3);
+}
+
+.tech-pattern {
+  background-image: radial-gradient(rgba(0, 153, 255, 0.1) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+.argentina-banner {
+  background: linear-gradient(135deg, rgba(0, 20, 50, 0.9), rgba(0, 40, 85, 0.9)),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: relative;
+  overflow: hidden;
+}
+
+.argentina-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #74acdf, #ffffff, #74acdf);
+  animation: scanline 3s linear infinite;
+}
+
+.argentina-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #74acdf, #ffffff, #74acdf);
+  animation: scanline 3s linear infinite reverse;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.clip-path-slant {
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+}
+
+.hexagon-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0l12 6v12l-12 6L0 18V6z' fill='%230099ff' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
