@@ -182,7 +182,7 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                 <div className="hidden grid-cols-10 items-center gap-4 py-4 font-bold md:grid">
                   <div className="col-span-6 text-right">{dictionary?.total}:</div>
                   <div className="col-span-2 text-right">€{formatNumber(totalEuros)}</div>
-                  <div className="col-span-2 text-right">${formatNumber(totalPesos)}</div>
+                  <div className="col-span-1 text-right">${formatNumber(totalPesos)}</div>
                 </div>
 
                 {/* Totals - Mobile */}
