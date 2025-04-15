@@ -19,8 +19,9 @@ const dictionaries = {
     },
     products: {
       price: "Price",
-      viewDetails: "Details",
-      addToCart: "Add to Cart",
+      viewSite: "View Site",
+      addToFavourite: "Add to Favorites",
+      removeFromFavourites: "Remove from Favorites",
       search: "Search products...",
       priceRange: "Price Range",
       min: "Min",
@@ -30,7 +31,7 @@ const dictionaries = {
       allProducts: "All Products",
       favoriteProducts: "Favorite Products",
       noProducts: "No products match your filters",
-      currency: "$",
+      currency: "€",
     },
     calculator: {
       title: "Price Calculator",
@@ -113,8 +114,9 @@ const dictionaries = {
     },
     products: {
       price: "Precio",
-      viewDetails: "Detalles",
-      addToCart: "Añadir",
+      viewSite: "Ver Sitio",
+      addToFavourite: "Añadir a favoritos",
+      removeFromFavourites: "Remover de favoritos",
       search: "Buscar productos...",
       priceRange: "Rango de Precio",
       min: "Mín",
@@ -124,7 +126,7 @@ const dictionaries = {
       allProducts: "Todos los Productos",
       favoriteProducts: "Productos Favoritos",
       noProducts: "Ningún producto coincide con tus filtros",
-      currency: "$",
+      currency: "€",
     },
     calculator: {
       title: "Calculadora de Precios",

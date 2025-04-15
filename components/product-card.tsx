@@ -8,13 +8,15 @@ import { Button } from "@/components/ui/button"
 import { addToFavorites, isFavorite, removeFromFavorites } from "@/lib/favorites"
 import type { Product } from "@/lib/types"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 interface ProductCardProps {
   product: Product
   dictionary: {
     price: string
-    viewDetails: string
-    addToCart: string
+    viewSite: string
+    addToFavourite: string,
+    removeFromFavourites: string
   }
 }
 
@@ -81,14 +83,16 @@ export default function ProductCard({ product, dictionary }: ProductCardProps) {
       </CardContent>
       <CardFooter className="flex flex-col items-start gap-3 px-6 pb-6 pt-0">
         <p className="text-lg font-bold text-cyan-500">
-          {dictionary.price}: ${product.price.toFixed(2)}
+          {dictionary?.price}: ${product.price.toFixed(2)}
         </p>
         <div className="flex w-full gap-3">
-          <Button variant="outline" size="sm" className="flex-1 border-blue-500/50 hover:border-blue-500">
-            {dictionary.viewDetails}
-          </Button>
-          <Button size="sm" className="flex-1 bg-blue-500 hover:bg-blue-500/80">
-            {dictionary.addToCart}
+          <Link href={product.link} target="_blank" className="flex-1 border-blue-500/50 hover:border-blue-500">
+            <Button variant="outline" size="sm" className="flex-1 border-blue-500/50 hover:border-blue-500">
+              {dictionary?.viewSite} 
+            </Button>
+          </Link>
+          <Button size="sm" className="flex-1 bg-blue-500 hover:bg-blue-500/80" onClick={toggleFavorite}>
+            {!isFav ? dictionary?.addToFavourite : dictionary?.removeFromFavourites}
           </Button>
         </div>
       </CardFooter>

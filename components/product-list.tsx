@@ -10,8 +10,8 @@ import ProductFilters from "./product-filters"
 interface ProductListProps {
   dictionary: {
     price: string
-    viewDetails: string
-    addToCart: string
+    viewSite: string
+    addToFavourite: string
     search: string
     priceRange: string
     min: string
