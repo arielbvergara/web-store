@@ -36,7 +36,8 @@ const dictionaries = {
     calculator: {
       title: "Price Calculator",
       euroBlueRate: "Euro Blue Rate",
-      enterRate: "Enter current rate",
+      checkRate: "View the current Euro Blue rate on ambito.com",
+      enterRate: "Enter the rate from ambito.com",
       products: "Selected Products",
       product: "Product",
       priceInEuros: "Price (EUR)",
@@ -100,9 +101,9 @@ const dictionaries = {
       contactInfo: "Contact Information",
       getInTouch: "How Our Process Works",
       detailedProcess:
-        "We travel to Argentina twice a year with a selection of high-quality products. To reserve items, contact us via email or phone, and we'll arrange a 30% deposit to secure your order.",
+        "I travel to Argentina twice a year with a selection of high-quality products. To reserve items, contact me by email or phone, and we’ll arrange a 50% deposit to secure your order.",
       paymentMethods:
-        "We accept payments in US Dollars, Euros, or Argentine Pesos through Mercado Pago or cash. The remaining 70% is due upon delivery in Buenos Aires."
+        "I accept payments in Dollars, Euros, or Argentine Pesos via Mercado Pago or cash. The remaining 50% is paid upon delivery in Buenos Aires."
     },
     footer: {
       copyright: "Web Store. All rights reserved.",
@@ -148,7 +149,8 @@ const dictionaries = {
     calculator: {
       title: "Calculadora de Precios",
       euroBlueRate: "Cotización Euro Blue",
-      enterRate: "Ingrese cotización actual",
+      checkRate: "Ver la cotización actual del Euro Blue en ambito.com",
+      enterRate: "Ingresá el valor desde ambito.com",
       products: "Productos Seleccionados",
       product: "Producto",
       priceInEuros: "Precio (EUR)",
@@ -212,9 +214,9 @@ const dictionaries = {
       contactInfo: "Información de Contacto",
       getInTouch: "Cómo Funciona Nuestro Proceso",
       detailedProcess:
-        "Viajamos a Argentina dos veces al año con una selección de productos de alta calidad. Para reservar artículos, contáctanos por correo electrónico o teléfono, y coordinaremos un depósito del 30% para asegurar tu pedido.",
+        "Viajo a Argentina dos veces al año con una selección de productos de alta calidad. Para reservar artículos, contáctame por correo electrónico o teléfono, y coordinaremos un depósito del 50% para asegurar tu pedido.",
       paymentMethods:
-        "Aceptamos pagos en Dólares Estadounidenses, Euros o Pesos Argentinos a través de Mercado Pago o efectivo. El 70% restante se paga al momento de la entrega en Buenos Aires.",
+        "Acepto pagos en Dólares, Euros o Pesos Argentinos a través de Mercado Pago o en efectivo. El 50% restante se paga al momento de la entrega en Buenos Aires",
     },
     footer: {
       copyright: "Tienda Web. Todos los derechos reservados.",

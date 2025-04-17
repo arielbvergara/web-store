@@ -16,6 +16,7 @@ interface CalculatorProps {
   dictionary: {
     title: string
     euroBlueRate: string
+    checkRate: string
     enterRate: string
     products: string
     product: string
@@ -104,20 +105,27 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* Euro Blue Rate Input */}
-          <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
-            <label htmlFor="euro-blue-rate" className="min-w-[180px] text-lg font-medium">
-              {dictionary?.euroBlueRate}:
-            </label>
-            <Input
-              id="euro-blue-rate"
-              type="number"
-              value={euroBlueRate}
-              onChange={handleRateChange}
-              placeholder={dictionary?.enterRate}
-              className="max-w-[200px] border-primary/30 bg-background/50 focus:border-primary"
-            />
-          </div>
+        <div className="flex flex-col items-start gap-2 md:flex-row md:items-center">
+          <label htmlFor="euro-blue-rate" className="min-w-[180px] text-lg font-medium">
+            {dictionary?.euroBlueRate}
+          </label>
+          <Input
+            id="euro-blue-rate"
+            type="number"
+            value={euroBlueRate}
+            onChange={handleRateChange}
+            placeholder={dictionary?.enterRate}
+            className="max-w-[200px] border-primary/30 bg-background/50 focus:border-primary"
+          />
+          <a
+            href="https://www.ambito.com/euro-informal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-blue-600 hover:underline md:ml-4"
+          >
+            {dictionary?.checkRate}
+          </a>
+        </div>
 
           {/* Product List */}
           <div className="space-y-4">
