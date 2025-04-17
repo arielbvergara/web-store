@@ -28,7 +28,7 @@ export default function ContactSection({ dictionary }: ContactSectionProps) {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">contact@webstore.com</p>
+                    <p className="text-muted-foreground">arielbvergara@gmail.com</p>
                   </div>
                 </div>
                 <div className="group flex items-start gap-4">
@@ -37,16 +37,7 @@ export default function ContactSection({ dictionary }: ContactSectionProps) {
                   </div>
                   <div>
                     <p className="font-medium">{dictionary?.phone}</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="group flex items-start gap-4">
-                  <div className="rounded-lg border border-blue-500/20 bg-blue-500/10 p-2 transition-colors group-hover:bg-blue-500/20">
-                    <MapPin className="h-5 w-5 text-blue-500" />
-                  </div>
-                  <div>
-                    <p className="font-medium">{dictionary?.address}</p>
-                    <p className="text-muted-foreground">123 Store Street, City, Country</p>
+                    <p className="text-muted-foreground">+31 658974168</p>
                   </div>
                 </div>
               </div>
