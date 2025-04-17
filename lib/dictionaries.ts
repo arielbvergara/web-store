@@ -55,8 +55,19 @@ const dictionaries = {
     },
     whoAmI: {
       title: "Who am I?",
-      content:
-        "Hi! I'm Ariel, I'm an argentinian living in the Netherlands and I started doing this to be able to visit my family. The main goal is to recover a bit of flight ticket money. I will be as transparent as possible showing you the website and the price listed in it and for you to know, I will add a 25% to the price if you buy one product, 20% if you buy 2 products and 15% if you buy 3 products or more.",
+      content:`
+                <section>
+                  <p>Hi! I’m Ariel, an Argentine living in the Netherlands. I started this little project to help me visit my family more often. The goal is to recover part of the cost of the plane ticket by offering products that are easier or cheaper to get here.</p>
+                  <p>I want to be completely transparent: I’ll show you the website where the product comes from and the original price.</p>
+                  <p>I just add a small fee for the service:</p>
+                  <ul>
+                    <li>👉 25% if you buy 1 product</li>
+                    <li>👉 20% if you buy 2 products</li>
+                    <li>👉 15% if you buy 3 or more</li>
+                  </ul>
+                  <p>Thanks for supporting this project!</p>
+                </section>
+              `
     },
     howItWorks: {
       description:
@@ -150,8 +161,19 @@ const dictionaries = {
     },
     whoAmI: {
       title: "¿Quién soy?",
-      content:
-        "¡Hola! Soy Ariel, un argentino viviendo en los Países Bajos y comencé a hacer esto para poder visitar a mi familia. El objetivo principal es recuperar un poco del dinero del boleto de avión. Seré lo más transparente posible mostrándote el sitio web y el precio que figura en él y para que sepas, agregaré un 25% al precio si compras un producto, 20% si compras 2 productos y 15% si compras 3 productos o más.",
+      content:`
+                <section>
+                  <p>Hola! Soy Ariel, un argentino que vive en los Países Bajos. Empecé con este emprendimiento como una forma de poder visitar a mi familia más seguido. La idea es recuperar parte del costo del pasaje de avión, y por eso decidí ofrecerte productos que acá se consiguen a buen precio.</p>
+                  <p>Quiero ser totalmente transparente: te voy a mostrar el sitio web de donde saco los productos y el precio original.</p> 
+                  <p>A ese precio le sumo un pequeño porcentaje por la gestión:</p>
+                  <ul>
+                    <li>👉 25% si comprás 1 producto</li>
+                    <li>👉 20% si comprás 2 productos</li>
+                    <li>👉 15% si comprás 3 o más</li>
+                  </ul>
+                  <p>Gracias por apoyar este proyecto!</p>
+                </section>
+              `
     },
     howItWorks: {
       description:

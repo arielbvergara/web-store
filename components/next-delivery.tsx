@@ -11,7 +11,7 @@ interface NextDeliveryProps {
 
 export default function NextDelivery({ dictionary }: NextDeliveryProps) {
   // This would come from your database or CMS in a real application
-  const nextDeliveryDate = "June 15-30, 2025"
+  const nextDeliveryDate = "01/12/2025"
 
   return (
     <div className="argentina-banner relative overflow-hidden rounded-lg">

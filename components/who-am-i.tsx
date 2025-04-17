@@ -18,7 +18,10 @@ export default function WhoAmI({ dictionary }: WhoAmIProps) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="leading-relaxed text-foreground/90">{dictionary?.content}</p>
+      <p 
+        className="leading-relaxed text-foreground/90"
+        dangerouslySetInnerHTML={{ __html: dictionary?.content || '' }}
+      />
       </CardContent>
     </Card>
   )

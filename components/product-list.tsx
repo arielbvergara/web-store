@@ -21,7 +21,8 @@ interface ProductListProps {
     allProducts: string
     favoriteProducts: string
     noProducts: string
-    currency: string
+    currency: string,
+    removeFromFavourites: string,
   }
   lang: Locale
 }
