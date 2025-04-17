@@ -52,6 +52,7 @@ const dictionaries = {
       nextDelivery: "Next delivery:",
       location: "Buenos Aires, Argentina",
       contactToReserve: "Contact us to reserve your products for the next delivery.",
+      contactButton: "Reserve Now",
     },
     whoAmI: {
       title: "Who am I?",
@@ -101,11 +102,16 @@ const dictionaries = {
       detailedProcess:
         "We travel to Argentina twice a year with a selection of high-quality products. To reserve items, contact us via email or phone, and we'll arrange a 30% deposit to secure your order.",
       paymentMethods:
-        "We accept payments in US Dollars, Euros, or Argentine Pesos through Mercado Pago or cash. The remaining 70% is due upon delivery in Buenos Aires.",
+        "We accept payments in US Dollars, Euros, or Argentine Pesos through Mercado Pago or cash. The remaining 70% is due upon delivery in Buenos Aires."
     },
     footer: {
       copyright: "Web Store. All rights reserved.",
     },
+    messages: {
+      whatsappMessage: "Hi Ariel, I'm interested in the following products: ",
+      emailMessage: `Hi Ariel,\n\nI'm interested in the following products:\n`,
+      emailSubject: "Products Inquiry"
+    }
   },
   es: {
     header: {
@@ -158,6 +164,7 @@ const dictionaries = {
       nextDelivery: "Próxima entrega:",
       location: "Buenos Aires, Argentina",
       contactToReserve: "Contáctanos para reservar tus productos para la próxima entrega.",
+      contactButton: "Reservar Ahora",
     },
     whoAmI: {
       title: "¿Quién soy?",
@@ -212,6 +219,11 @@ const dictionaries = {
     footer: {
       copyright: "Tienda Web. Todos los derechos reservados.",
     },
+    messages: {
+      whatsappMessage: "Hola Ariel, estoy interesado/a en los siguientes productos: ",
+      emailMessage: `Hola Ariel,\n\nEstoy interesado/a en los siguientes productos:\n`,
+      emailSubject: "Consulta sobre productos"
+    }
   },
 }
 

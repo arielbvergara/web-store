@@ -1,5 +1,8 @@
 import { Mail, Phone, MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { WhatsappLink } from "./ui/whatsapp-link"
+import { Locale } from "@/lib/types"
+import { EmailLink } from "./ui/email-link"
 
 interface ContactSectionProps {
   dictionary: {
@@ -10,10 +13,16 @@ interface ContactSectionProps {
     getInTouch: string
     detailedProcess: string
     paymentMethods: string
+  },
+  lang: Locale,
+  messages:{
+    whatsappMessage: string,
+    emailMessage: string,
+    emailSubject: string,
   }
 }
 
-export default function ContactSection({ dictionary }: ContactSectionProps) {
+export default function ContactSection({ dictionary, lang, messages }: ContactSectionProps) {
   return (
     <div className="mx-auto max-w-3xl">
       <Card className="gamer-border relative overflow-hidden border-muted bg-card/80 backdrop-blur-sm">
@@ -28,7 +37,9 @@ export default function ContactSection({ dictionary }: ContactSectionProps) {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">arielbvergara@gmail.com</p>
+                    <EmailLink lang={lang} emailMessage={messages?.emailMessage} emailSubject={messages?.emailSubject}>
+                      <p className="text-muted-foreground">arielbvergara@gmail.com</p>
+                    </EmailLink>
                   </div>
                 </div>
                 <div className="group flex items-start gap-4">
@@ -37,7 +48,9 @@ export default function ContactSection({ dictionary }: ContactSectionProps) {
                   </div>
                   <div>
                     <p className="font-medium">{dictionary?.phone}</p>
-                    <p className="text-muted-foreground">+31 658974168</p>
+                    <WhatsappLink lang={lang} message={messages?.whatsappMessage}>
+                      <p className="text-muted-foreground">+31 658974168</p>  
+                    </WhatsappLink>
                   </div>
                 </div>
               </div>

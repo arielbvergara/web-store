@@ -49,7 +49,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
         <section id="contact" className="py-16">
           <h2 className="gamer-gradient mb-12 text-center text-3xl font-bold">{dictionary?.sections.contact}</h2>
-          <ContactSection dictionary={dictionary?.contact} />
+          <ContactSection dictionary={dictionary?.contact} lang={resolvedParams.lang} messages={dictionary?.messages} />
         </section>
       </main>
       <footer className="border-t border-muted bg-card/80 py-8 text-foreground backdrop-blur-sm">

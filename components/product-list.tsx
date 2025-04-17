@@ -96,10 +96,10 @@ export default function ProductList({ dictionary, lang }: ProductListProps) {
 
   return (
     <div>
-      {showingFavorites && (
+      {showingFavorites ? (
         <h2 className="gamer-gradient mb-8 text-center text-3xl font-bold">{dictionary?.favoriteProducts}</h2>
-      )}
-
+      ) : <h2 className="gamer-gradient mb-8 text-center text-3xl font-bold">{dictionary?.allProducts}</h2>}
+      
       <ProductFilters
         dictionary={dictionary}
         minPrice={minPrice}

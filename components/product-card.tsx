@@ -58,15 +58,7 @@ export default function ProductCard({ product, dictionary }: ProductCardProps) {
   return (
     <Card className="gamer-border relative flex h-full flex-col overflow-hidden border-muted bg-card/80 backdrop-blur-sm">
       <CardHeader className="relative p-6">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute right-4 top-4 z-20 rounded-md bg-background/50 backdrop-blur-sm hover:bg-background/70"
-          onClick={toggleFavorite}
-          aria-label={isFav ? "Remove from favorites" : "Add to favorites"}
-        >
-          <Heart className={cn("h-5 w-5", isFav ? "fill-red-500 text-red-500" : "text-gray-400")} />
-        </Button>
+        
         <div className="relative aspect-square overflow-hidden rounded-md bg-white">
           <div className="absolute inset-0 z-10 from-primary/20 to-secondary/20"></div>
           <Image

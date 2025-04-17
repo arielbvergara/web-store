@@ -6,6 +6,7 @@ interface NextDeliveryProps {
     nextDelivery: string
     location: string
     contactToReserve: string
+    contactButton: string
   }
 }
 
@@ -35,9 +36,15 @@ export default function NextDelivery({ dictionary }: NextDeliveryProps) {
             <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#0099ff] to-[#00e5ff] opacity-20 blur-lg"></div>
             <div className="relative rounded-lg border border-[#0099ff]/30 bg-gradient-to-r from-[#0099ff]/10 to-[#00e5ff]/10 p-4 backdrop-blur-sm">
               <p className="font-medium text-white">{dictionary?.contactToReserve}</p>
+              <a 
+                href="https://wa.me/+31658974168?text=Hola%20Ariel%2C%20me%20interesa%20saber%20más%20sobre%20los%20productos%20que%20ofrecés" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
               <button className="mt-3 rounded bg-[#0099ff] px-4 py-2 font-medium text-white transition-colors hover:bg-[#007acc]">
-                Reserve Now
+                {dictionary?.contactButton}
               </button>
+              </a>
             </div>
           </div>
         </div>
