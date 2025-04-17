@@ -70,7 +70,7 @@ export default function ProductCard({ product, dictionary }: ProductCardProps) {
         <div className="relative aspect-square overflow-hidden rounded-md bg-white">
           <div className="absolute inset-0 z-10 from-primary/20 to-secondary/20"></div>
           <Image
-            src={product.image || "/placeholder.svg"}
+            src={product.image}
             alt={product.name}
             fill
             className="z-0 object-contain transition-transform hover:scale-105"

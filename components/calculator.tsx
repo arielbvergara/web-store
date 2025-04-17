@@ -29,7 +29,18 @@ interface CalculatorProps {
 
 // Format number with thousands separator
 function formatNumber(num: number): string {
-  return Math.floor(num).toLocaleString("es-AR")
+  return Math.ceil(num).toLocaleString("es-AR")
+}
+
+function formatNumberWith2Decimals(num: number): string {
+  return (Math.ceil(num*100)/100).toLocaleString("es-AR")
+}
+
+// Calculate percentage of increase based on number of products
+const calculatePercentage = (productsCount: number): number => {
+  if (productsCount <= 1) return 1.25
+  if (productsCount === 2) return 1.20
+  return 1.15
 }
 
 export default function Calculator({ dictionary, lang }: CalculatorProps) {
@@ -61,6 +72,9 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
     return () => clearInterval(intervalId)
   }, [allProducts])
 
+  // Calculate percentage of increase based on number of products
+  const percentageIncreace = calculatePercentage(favoriteProducts.length)
+  
   // Calculate totals
   const totalEuros = favoriteProducts.reduce((sum, product) => sum + product.price, 0)
   const totalPesos = totalEuros * euroBlueRate
@@ -108,7 +122,7 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
           {/* Product List */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-medium">{dictionary?.products}</h3>
+              <h3 className="text-lg font-medium">{dictionary?.products} ({favoriteProducts.length} 👉 {formatNumber((percentageIncreace-1)*100)}%)</h3>
             </div>
 
             {/* Favorite Products */}
@@ -136,7 +150,7 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                     <div className="col-span-6 hidden items-center gap-3 md:flex">
                       <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-md">
                         <Image
-                          src={product.image || "/placeholder.svg"}
+                          src={product.image}
                           alt={product.name}
                           fill
                           className="object-cover"
@@ -144,9 +158,9 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                       </div>
                       <span className="truncate text-sm">{product.name}</span>
                     </div>
-                    <div className="col-span-2 hidden text-right md:block">€{formatNumber(product.price)}</div>
+                    <div className="col-span-2 hidden text-right md:block">€{formatNumberWith2Decimals(product.price * percentageIncreace)} (€{formatNumberWith2Decimals(product.price)})</div>
                     <div className="col-span-1 hidden text-right md:block">
-                      ${formatNumber(product.price * euroBlueRate)}
+                      ${formatNumberWith2Decimals(product.price * euroBlueRate * percentageIncreace)}
                     </div>
                     <div className="col-span-1 hidden text-right md:block">
                       <Button
@@ -164,16 +178,16 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                     <div className="col-span-2 flex items-center justify-center md:hidden">
                       <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-md">
                         <Image
-                          src={product.image || "/placeholder.svg"}
+                          src={product.image}
                           alt={product.name}
                           fill
                           className="object-cover"
                         />
                       </div>
                     </div>
-                    <div className="col-span-4 text-center md:hidden">€{formatNumber(product.price)}</div>
+                    <div className="col-span-4 text-center md:hidden">€{formatNumber(product.price * percentageIncreace)}</div>
                     <div className="col-span-4 text-center md:hidden">
-                      ${formatNumber(product.price * euroBlueRate)}
+                      ${formatNumber(product.price * euroBlueRate * percentageIncreace)}
                     </div>
                   </div>
                 ))}
@@ -181,14 +195,14 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                 {/* Totals - Desktop */}
                 <div className="hidden grid-cols-10 items-center gap-4 py-4 font-bold md:grid">
                   <div className="col-span-6 text-right">{dictionary?.total}:</div>
-                  <div className="col-span-2 text-right">€{formatNumber(totalEuros)}</div>
-                  <div className="col-span-1 text-right">${formatNumber(totalPesos)}</div>
+                  <div className="col-span-2 text-right">€{formatNumberWith2Decimals(totalEuros * percentageIncreace)}</div>
+                  <div className="col-span-1 text-right">${formatNumberWith2Decimals(totalPesos * percentageIncreace)}</div>
                 </div>
 
                 {/* Totals - Mobile */}
                 <div className="grid grid-cols-2 items-center gap-4 py-4 font-bold md:hidden">
-                  <div className="text-center">€{formatNumber(totalEuros)}</div>
-                  <div className="text-center">${formatNumber(totalPesos)}</div>
+                  <div className="text-center">€{formatNumberWith2Decimals(totalEuros * percentageIncreace)}</div>
+                  <div className="text-center">${formatNumberWith2Decimals(totalPesos * percentageIncreace)}</div>
                 </div>
               </div>
             ) : (
