@@ -1,5 +1,7 @@
+'use client'
 import { User } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { useEffect, useState } from "react"
 
 interface WhoAmIProps {
   dictionary: {
@@ -9,6 +11,13 @@ interface WhoAmIProps {
 }
 
 export default function WhoAmI({ dictionary }: WhoAmIProps) {
+
+  const [htmlContent, setHtmlContent] = useState('')
+
+  useEffect(() => {
+    setHtmlContent(dictionary.content)
+  }, [dictionary.content])
+
   return (
     <Card className="gamer-border relative overflow-hidden border-muted bg-card/80 backdrop-blur-sm">
       <CardHeader className="pb-2">
@@ -20,7 +29,7 @@ export default function WhoAmI({ dictionary }: WhoAmIProps) {
       <CardContent>
       <p 
         className="leading-relaxed text-foreground/90"
-        dangerouslySetInnerHTML={{ __html: dictionary?.content || '' }}
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
       />
       </CardContent>
     </Card>

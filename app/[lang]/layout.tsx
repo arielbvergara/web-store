@@ -16,8 +16,8 @@ export default async function LocaleLayout({
   const resolvedParams = await params;
   
   return (
-    <html lang={resolvedParams.lang}>
-      <body>{children}</body>
-    </html>
+    <div lang={resolvedParams.lang}>
+      {children}
+    </div>
   )
 }
