@@ -201,14 +201,14 @@ export default function Calculator({ dictionary, lang }: CalculatorProps) {
                 ))}
 
                 {/* Totals - Desktop */}
-                <div className="hidden grid-cols-10 items-center gap-4 py-4 font-bold md:grid">
-                  <div className="col-span-6 text-right">{dictionary?.total}:</div>
-                  <div className="col-span-2 text-right">€{formatNumberWith2Decimals(totalEuros * percentageIncreace)}</div>
+                <div className="argentina-banner relative hidden grid-cols-10 items-center gap-4 overflow-hidden rounded-lg py-4 font-bold md:grid">
+                  <div className="col-span-1 text-right">{dictionary?.total}:</div>
+                  <div className="col-span-7 text-right">€{formatNumberWith2Decimals(totalEuros * percentageIncreace)}</div>
                   <div className="col-span-1 text-right">${formatNumberWith2Decimals(totalPesos * percentageIncreace)}</div>
                 </div>
 
                 {/* Totals - Mobile */}
-                <div className="grid grid-cols-2 items-center gap-4 py-4 font-bold md:hidden">
+                <div className="argentina-banner relative grid grid-cols-2 items-center gap-4 overflow-hidden rounded-lg py-4 font-bold md:hidden">
                   <div className="text-center">€{formatNumberWith2Decimals(totalEuros * percentageIncreace)}</div>
                   <div className="text-center">${formatNumberWith2Decimals(totalPesos * percentageIncreace)}</div>
                 </div>
